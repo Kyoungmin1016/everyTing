@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.tukorea.free.mappers.BoardMapper">
+
+	<select id="selectBynum" resultType="org.tukorea.free.domain.NoticeBoardVO">
+		select num,nb.id,username,sex,major,title,content,`date` from `notice_board` as nb join `member` as m on nb.id = m.id where nb.num = #{num};
+	</select>
+	
+	<select id="selectAll" resultType="org.tukorea.free.domain.NoticeBoardVO">
+		<![CDATA[
+ 			select num,nb.id,username,sex,major,title,content,`date` from `notice_board` as nb join `member` as m on nb.id = m.id
+      	]]> 
+	</select>
+	
+	<insert id="insert">
+		insert into `notice_board`(id,title,content,`date`) values(#{id},#{title},#{content},now());
+	</insert>
+	
+	<delete id="delete">
+		delete from `notice_board` where num = #{num}
+	</delete>
+	
+	<update id="update">
+		update `notice_board` set title=#{title},content=#{content},`date`=now() where num=#{num};
+	</update>
+	
+	<insert id="insertApply">
+		insert into `applyList`(num,other) values(#{num},#{other})
+	</insert>
+	
+	<select id="selectCheckApply" resultType="org.tukorea.free.domain.ApplyVO">
+		<![CDATA[
+		select nb.id,al.num,title,other from `notice_board` as nb join `applyList` as al on nb.num = al.num where nb.id = #{id};
+		]]>
+	</select>
+
+</mapper>
