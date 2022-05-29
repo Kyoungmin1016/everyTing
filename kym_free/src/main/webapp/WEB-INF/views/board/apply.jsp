@@ -12,12 +12,13 @@
 		<div>
 			<table class="table table-hover">
 			  <tr>
-			    <th>제목</th><th>신청자</th>
+			    <th>제목</th><th>신청자</th><th></th>
 			  </tr>
 			  <c:forEach var="apply" items="${applys}" >
 				  <tr>
-				    <td><c:out value="${apply.title}"/></td>
+				    <td style="cursor: pointer;" onClick = "location.href='/free/board/content?num=${apply.num}'"><c:out value="${apply.title}"/></td>
 				    <td><c:out value="${apply.other}"/></td>
+				    <td><c:url value="/board/deleteApply/${apply.num}" var="url"/><a href="${url}" class="btn btn-danger">해당 글 신청자 모두 삭제</a></td>
 				  </tr>
 			  </c:forEach>
 			</table>

@@ -20,14 +20,14 @@
 			<div style="padding-top: 20px; text-align: center;">
 				<form name=form1 action="http://localhost:8080/free/auth/login" method="post">
 					<div class="mb-3">
-					  <label for="formGroupExampleInput" class="form-label">ID</label>
+					  <label for="formGroupExampleInput" class="form-label">카카오톡 ID</label>
 					  <input type="text" placeholder="id" class="form-control" id="formGroupExampleInput" name="id" maxlength="20" placeholder="Example input placeholder">
 					</div>
 					<div class="mb-3">
 					  <label for="formGroupExampleInput2" class="form-label">PASSWORD</label>
 					  <input type="password" placeholder="password" name="passwd" maxlength="20" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
 					</div>
-					<input type="submit" class="btn btn-primary" value="로그인" style="float:left;">
+					<input type="submit" class="btn btn-white" value="로그인" style="float:left; background-color:pink;color:white;">
 				</form>
 				<form name=form2 action="http://localhost:8080/free/auth/register">
 					<input type="submit" class="btn btn-light" value="회원가입" style="float:right;">

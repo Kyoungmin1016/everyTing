@@ -36,6 +36,6 @@
 			  </tr>
 		  </c:forEach>
 		</table>
-		<c:url value="/board/register" var="url"/><a class="btn btn-primary" href="${url}" style="margin-right : 20px; float:right;">글 생성</a>
+		<c:url value="/board/register" var="url"/><a class="btn btn-white" href="${url}" style="margin-right : 20px; float:right;background-color:pink;color:white">글 생성</a>
 	</body>
 </html>

@@ -17,6 +17,9 @@
           <a class="nav-link" href="http://localhost:8080/free/board/checkApply">신청판</a>
         </li>
       </ul>
+      <form class="d-flex" action="http://localhost:8080/free/board/logout" method="post">
+        <button class="btn btn-outline-primary" type="submit">로그아웃</button>
+      </form>
     </div>
   </div>
 </nav>

@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.tukorea.free.domain.ApplyVO;
 import org.tukorea.free.domain.NoticeBoardVO;
 import org.tukorea.free.persistence.BoardDAO;
@@ -33,9 +36,11 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
+	@Transactional(propagation=Propagation.REQUIRED, isolation=Isolation.DEFAULT)
 	public void deleteBoard(int num) throws Exception {
 		// TODO Auto-generated method stub
 		boardDAO.delete(num);
+		boardDAO.deleteApply(num);
 	}
 
 	@Override
@@ -54,6 +59,13 @@ public class BoardServiceImpl implements BoardService{
 	public List<ApplyVO> readApplyListBOard(String id) throws Exception {
 		// TODO Auto-generated method stub
 		return boardDAO.readApplyList(id);
+	}
+
+	@Override
+	@Transactional(propagation=Propagation.REQUIRED, isolation=Isolation.DEFAULT)
+	public void deleteApply(int num) throws Exception {
+		// TODO Auto-generated method stub
+		boardDAO.deleteApply(num);
 	}
 
 }

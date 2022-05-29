@@ -13,4 +13,5 @@ public interface BoardService {
 	public void modifyBoard(NoticeBoardVO board) throws Exception;
 	public void applyBoard(ApplyVO apply) throws Exception;
 	public List<ApplyVO> readApplyListBOard(String id) throws Exception;
+	public void deleteApply(int num) throws Exception;
 }

@@ -10,9 +10,8 @@
 	<body>
 		<jsp:include page="/WEB-INF/views/common/board_header.jsp" flush="false"></jsp:include>
 		<div>
-			<h3>글 읽기</h3>
 			<div>
-				<table>
+				<table class="table table-hover">
 					<thead>
 						<tr><th colspan="2" style="background-color: #eeeeee; text-align: center;">게시글</th></tr>
 					</thead>
@@ -21,8 +20,8 @@
 					    <tr><td><c:out value="${board.content}"/></td></tr>
 					</tbody>
 				</table>
-				<form name=form4 action="http://localhost:8080/free/board/apply?num=${board.num }" method="post">
-					<input type="submit" value="신청">
+				<form name=form4 action="http://localhost:8080/free/board/apply/${board.num }" method="post">
+					<input class="btn btn-white" type="submit" value="신청" style="background-color:pink;color:white;margin-left:10px">
 				</form>
 			</div>
 		</div>

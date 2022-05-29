@@ -41,7 +41,6 @@ public class MemberController {
 			return "redirect:/auth/login";
 		}
 		
-		logger.info(check_id);
 		logger.info("/login URL POST method called. then login method executed.");
 		session.setAttribute("id", check_id);
 		return "redirect:/board/list";

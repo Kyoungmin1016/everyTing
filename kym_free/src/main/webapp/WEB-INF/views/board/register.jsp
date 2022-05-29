@@ -10,7 +10,9 @@
 	<body>
 		<jsp:include page="/WEB-INF/views/common/board_header.jsp" flush="false"></jsp:include>
 		<div>
-			<h3>글쓰기</h3>
+			<div>
+				<h5>글작성</h5>
+			</div>
 			<form name=form3 action="http://localhost:8080/free/board/register" method="post">
 				<div class="form-floating">
 				  <textarea class="form-control" placeholder="Leave a Title here" id="floatingTextarea2" name="title" style="height: 60px"></textarea>
@@ -20,7 +22,7 @@
 				  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="content" style="height: 300px"></textarea>
 				  <label for="floatingTextarea2">Content</label>
 				</div>
-				<input type="submit" class="btn btn-primary" value="글 등록" style="float:right; margin:20px">
+				<input type="submit" class="btn btn-white" value="글 등록" style="float:right; margin:20px;color:white;background-color:pink;">
 			</form>
 		</div>
 	</body>

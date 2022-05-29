@@ -37,7 +37,7 @@
 		<dependency>
 		    <groupId>org.aspectj</groupId>
 		    <artifactId>aspectjtools</artifactId>
-		    <version>1.9.9.1</version>
+		    <version>${org.aspectj-version}</version>
 		</dependency>
 	
 			<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->

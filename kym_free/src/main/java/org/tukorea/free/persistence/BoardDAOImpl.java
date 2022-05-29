@@ -64,5 +64,11 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return applyList;
 	}
+
+	@Override
+	public void deleteApply(int num) throws Exception {
+		// TODO Auto-generated method stub
+		sqlSession.delete(namespace +".deleteApply",num);
+	}
 	
 }

@@ -13,4 +13,5 @@ public interface BoardDAO {
 	public void modify(NoticeBoardVO board) throws Exception;
 	public void addApply(ApplyVO apply) throws Exception;
 	public List<ApplyVO> readApplyList (String id) throws Exception;
+	public void deleteApply(int num) throws Exception;
 }

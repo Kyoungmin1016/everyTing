@@ -37,5 +37,9 @@
 		select nb.id,al.num,title,other from `notice_board` as nb join `applyList` as al on nb.num = al.num where nb.id = #{id};
 		]]>
 	</select>
+	
+	<delete id="deleteApply">
+		delete from `applyList` where num=#{num}
+	</delete>
 
 </mapper>
